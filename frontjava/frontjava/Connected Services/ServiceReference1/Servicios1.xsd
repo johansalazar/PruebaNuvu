@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://WebServices/" targetNamespace="http://WebServices/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="agregarPersona" type="tns:agregarPersona" />
+  <xs:element name="agregarPersonaResponse" type="tns:agregarPersonaResponse" />
+  <xs:element name="agregarTarjeta" type="tns:agregarTarjeta" />
+  <xs:element name="agregarTarjetaResponse" type="tns:agregarTarjetaResponse" />
+  <xs:element name="editarPersona" type="tns:editarPersona" />
+  <xs:element name="editarPersonaResponse" type="tns:editarPersonaResponse" />
+  <xs:element name="editarTarjeta" type="tns:editarTarjeta" />
+  <xs:element name="editarTarjetaResponse" type="tns:editarTarjetaResponse" />
+  <xs:element name="eliminarPersona" type="tns:eliminarPersona" />
+  <xs:element name="eliminarPersonaResponse" type="tns:eliminarPersonaResponse" />
+  <xs:element name="eliminarTarjeta" type="tns:eliminarTarjeta" />
+  <xs:element name="eliminarTarjetaResponse" type="tns:eliminarTarjetaResponse" />
+  <xs:element name="listarPersona" type="tns:listarPersona" />
+  <xs:element name="listarPersonaResponse" type="tns:listarPersonaResponse" />
+  <xs:element name="listarTarjetas" type="tns:listarTarjetas" />
+  <xs:element name="listarTarjetasLibres" type="tns:listarTarjetasLibres" />
+  <xs:element name="listarTarjetasLibresResponse" type="tns:listarTarjetasLibresResponse" />
+  <xs:element name="listarTarjetasResponse" type="tns:listarTarjetasResponse" />
+  <xs:element name="personaId" type="tns:personaId" />
+  <xs:element name="personaIdResponse" type="tns:personaIdResponse" />
+  <xs:element name="tarjetaId" type="tns:tarjetaId" />
+  <xs:element name="tarjetaIdResponse" type="tns:tarjetaIdResponse" />
+  <xs:complexType name="agregarTarjeta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombres" type="xs:string" />
+      <xs:element name="agno" type="xs:int" />
+      <xs:element name="mes" type="xs:int" />
+      <xs:element name="codigo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="agregarTarjetaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPersona">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarPersonaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:persona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="persona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellido" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="idTarjeta" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTarjetasLibres">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTarjetasLibresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:tarjeta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tarjeta">
+    <xs:sequence>
+      <xs:element name="agno" type="xs:int" />
+      <xs:element name="codigo" type="xs:int" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="mes" type="xs:int" />
+      <xs:element minOccurs="0" name="numero" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="agregarPersona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombres" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidos" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element name="idTarjeta" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="agregarPersonaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="personaId">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="personaIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:persona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editarTarjeta">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombres" type="xs:string" />
+      <xs:element name="agno" type="xs:int" />
+      <xs:element name="mes" type="xs:int" />
+      <xs:element name="codigo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editarTarjetaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tarjetaId">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tarjetaIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:tarjeta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editarPersona">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombres" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidos" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element name="idTarjeta" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editarPersonaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTarjetas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTarjetasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:tarjeta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarTarjeta">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarTarjetaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPersona">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPersonaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
