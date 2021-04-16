@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://WebServices/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="Servicios" targetNamespace="http://WebServices/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:45045/ServicioCrud/Servicios?xsd=1" namespace="http://WebServices/" />
+    </xsd:schema>
+  </types>
+  <message name="agregarPersona">
+    <part name="parameters" element="tns:agregarPersona" />
+  </message>
+  <message name="agregarPersonaResponse">
+    <part name="parameters" element="tns:agregarPersonaResponse" />
+  </message>
+  <message name="tarjetaId">
+    <part name="parameters" element="tns:tarjetaId" />
+  </message>
+  <message name="tarjetaIdResponse">
+    <part name="parameters" element="tns:tarjetaIdResponse" />
+  </message>
+  <message name="editarTarjeta">
+    <part name="parameters" element="tns:editarTarjeta" />
+  </message>
+  <message name="editarTarjetaResponse">
+    <part name="parameters" element="tns:editarTarjetaResponse" />
+  </message>
+  <message name="editarPersona">
+    <part name="parameters" element="tns:editarPersona" />
+  </message>
+  <message name="editarPersonaResponse">
+    <part name="parameters" element="tns:editarPersonaResponse" />
+  </message>
+  <message name="listarTarjetas">
+    <part name="parameters" element="tns:listarTarjetas" />
+  </message>
+  <message name="listarTarjetasResponse">
+    <part name="parameters" element="tns:listarTarjetasResponse" />
+  </message>
+  <message name="eliminarTarjeta">
+    <part name="parameters" element="tns:eliminarTarjeta" />
+  </message>
+  <message name="eliminarTarjetaResponse">
+    <part name="parameters" element="tns:eliminarTarjetaResponse" />
+  </message>
+  <message name="listarPersona">
+    <part name="parameters" element="tns:listarPersona" />
+  </message>
+  <message name="listarPersonaResponse">
+    <part name="parameters" element="tns:listarPersonaResponse" />
+  </message>
+  <message name="agregarTarjeta">
+    <part name="parameters" element="tns:agregarTarjeta" />
+  </message>
+  <message name="agregarTarjetaResponse">
+    <part name="parameters" element="tns:agregarTarjetaResponse" />
+  </message>
+  <message name="personaId">
+    <part name="parameters" element="tns:personaId" />
+  </message>
+  <message name="personaIdResponse">
+    <part name="parameters" element="tns:personaIdResponse" />
+  </message>
+  <message name="eliminarPersona">
+    <part name="parameters" element="tns:eliminarPersona" />
+  </message>
+  <message name="eliminarPersonaResponse">
+    <part name="parameters" element="tns:eliminarPersonaResponse" />
+  </message>
+  <message name="listarTarjetasLibres">
+    <part name="parameters" element="tns:listarTarjetasLibres" />
+  </message>
+  <message name="listarTarjetasLibresResponse">
+    <part name="parameters" element="tns:listarTarjetasLibresResponse" />
+  </message>
+  <portType name="Servicios">
+    <operation name="agregarPersona">
+      <input wsam:Action="http://WebServices/Servicios/agregarPersonaRequest" message="tns:agregarPersona" />
+      <output wsam:Action="http://WebServices/Servicios/agregarPersonaResponse" message="tns:agregarPersonaResponse" />
+    </operation>
+    <operation name="tarjetaId">
+      <input wsam:Action="http://WebServices/Servicios/tarjetaIdRequest" message="tns:tarjetaId" />
+      <output wsam:Action="http://WebServices/Servicios/tarjetaIdResponse" message="tns:tarjetaIdResponse" />
+    </operation>
+    <operation name="editarTarjeta">
+      <input wsam:Action="http://WebServices/Servicios/editarTarjetaRequest" message="tns:editarTarjeta" />
+      <output wsam:Action="http://WebServices/Servicios/editarTarjetaResponse" message="tns:editarTarjetaResponse" />
+    </operation>
+    <operation name="editarPersona">
+      <input wsam:Action="http://WebServices/Servicios/editarPersonaRequest" message="tns:editarPersona" />
+      <output wsam:Action="http://WebServices/Servicios/editarPersonaResponse" message="tns:editarPersonaResponse" />
+    </operation>
+    <operation name="listarTarjetas">
+      <input wsam:Action="http://WebServices/Servicios/listarTarjetasRequest" message="tns:listarTarjetas" />
+      <output wsam:Action="http://WebServices/Servicios/listarTarjetasResponse" message="tns:listarTarjetasResponse" />
+    </operation>
+    <operation name="eliminarTarjeta">
+      <input wsam:Action="http://WebServices/Servicios/eliminarTarjetaRequest" message="tns:eliminarTarjeta" />
+      <output wsam:Action="http://WebServices/Servicios/eliminarTarjetaResponse" message="tns:eliminarTarjetaResponse" />
+    </operation>
+    <operation name="listarPersona">
+      <input wsam:Action="http://WebServices/Servicios/listarPersonaRequest" message="tns:listarPersona" />
+      <output wsam:Action="http://WebServices/Servicios/listarPersonaResponse" message="tns:listarPersonaResponse" />
+    </operation>
+    <operation name="agregarTarjeta">
+      <input wsam:Action="http://WebServices/Servicios/agregarTarjetaRequest" message="tns:agregarTarjeta" />
+      <output wsam:Action="http://WebServices/Servicios/agregarTarjetaResponse" message="tns:agregarTarjetaResponse" />
+    </operation>
+    <operation name="personaId">
+      <input wsam:Action="http://WebServices/Servicios/personaIdRequest" message="tns:personaId" />
+      <output wsam:Action="http://WebServices/Servicios/personaIdResponse" message="tns:personaIdResponse" />
+    </operation>
+    <operation name="eliminarPersona">
+      <input wsam:Action="http://WebServices/Servicios/eliminarPersonaRequest" message="tns:eliminarPersona" />
+      <output wsam:Action="http://WebServices/Servicios/eliminarPersonaResponse" message="tns:eliminarPersonaResponse" />
+    </operation>
+    <operation name="listarTarjetasLibres">
+      <input wsam:Action="http://WebServices/Servicios/listarTarjetasLibresRequest" message="tns:listarTarjetasLibres" />
+      <output wsam:Action="http://WebServices/Servicios/listarTarjetasLibresResponse" message="tns:listarTarjetasLibresResponse" />
+    </operation>
+  </portType>
+  <binding name="ServiciosPortBinding" type="tns:Servicios">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="agregarPersona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="tarjetaId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="editarTarjeta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="editarPersona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTarjetas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarTarjeta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPersona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarTarjeta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="personaId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarPersona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTarjetasLibres">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Servicios">
+    <port name="ServiciosPort" binding="tns:ServiciosPortBinding">
+      <soap:address location="http://localhost:45045/ServicioCrud/Servicios" />
+    </port>
+  </service>
+</definitions>
